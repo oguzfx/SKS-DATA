@@ -1,0 +1,19 @@
+{
+  "Diyaliz": [{
+  "ust":"KURUMSAL HİZMETLER",
+    "alt": [
+    "Kurumsal Yapı",
+    "Kalite Yönetimi",
+    "Doküman Yönetimi",
+    "Risk Yönetimi",
+    "İstenmeyen Olay Bildirim Sistemi",
+    "Acil Durum ve Afet Yönetimi",
+    "Eğitim Yönetimi",
+    "Sosyal Sorumluluk"
+  ]},{
+  "ust":"HASTA VE ÇALIŞAN ODAKLI HİZMETLER",
+    "alt": [
+    "Hasta Deneyimi",
+    "Sağlıklı Çalışma Yaşamı"
+  ]}
+]}
