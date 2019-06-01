@@ -4,11 +4,12 @@
         <h1 class="title is-3">KURUMSAL HİZMETLER</h1>
         <h2 class="subtitle">Kurumsal Yapı</h2>
         <div class="notification">
-           <strong>KKU01</strong>
-          <a class="button is-danger is-outlined">Çekirdek</a><br>
-          Kuruluş faaliyetlerinin tamamını kapsayacak şekilde bir organizasyon yapısı oluşturulmalıdır.
+          <a class="button is-outlined">KKU01</a>
+          <a class="button is-danger is-outlined">Çekirdek</a><br><br>
+          <p>Kuruluş faaliyetlerinin tamamını kapsayacak şekilde bir organizasyon yapısı oluşturulmalıdır.</p>
           <br>
           <a @click="success" class="button is-success">K</a>
+          <a @click="info" class="button is-info">KK</a>
           <a @click="danger" class="button is-danger">KM</a>
           <a @click="warning" class="button is-warning">DD</a>
         </div>
@@ -52,6 +53,7 @@
                   <div class="content">
                     <p>
                       <a @click="success" class="button is-success">K</a>
+                      <a @click="info" class="button is-info">KK</a>
                       <a @click="danger" class="button is-danger">KM</a>
                       <a @click="warning" class="button is-warning">DD</a>
                     </p>
@@ -91,6 +93,13 @@
           message: `Karşılıyor Seçildi`,
           position: 'is-bottom',
           type: 'is-success'
+        })
+      },
+      info() {
+        this.$toast.open({
+          message: `Kısmen Karşılıyor Seçildi`,
+          position: 'is-bottom',
+          type: 'is-info'
         })
       },
       danger() {

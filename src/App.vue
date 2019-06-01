@@ -18,7 +18,7 @@
           </a>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
-              Standartlar
+              Setler
             </a>
             <div class="navbar-dropdown">
               <router-link class="navbar-item" :to="{ name: 'SksStandart', params: { sksId: 'ADSH' }}">ADSH</router-link>
