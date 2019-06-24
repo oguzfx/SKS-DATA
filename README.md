@@ -1,8 +1,9 @@
-# sks
+# Sağlıkta Kalite Standartları (SKS)
 
-> sks kriterlerinin mobilde goruntulenmesi ve aninda degerlendirme yapilabilmesi
+> Bu program web tarayıcısı olan tüm cihazlar ile hızlı bir şekilde ve kolayca Kalite Standartlarını görüntüleyip 
+işlem yapabilmelerini amaçlamaktadır.
 
-## Build Setup
+## Kurulum İçin
 
 ``` bash
 # install dependencies
