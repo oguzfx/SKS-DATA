@@ -1,8 +1,10 @@
 <template>
     <div class="column">
       <div class="container">
+
         <h1 class="title is-3">KURUMSAL HİZMETLER</h1>
         <h2 class="subtitle">Kurumsal Yapı</h2>
+
         <div class="notification">
           <a class="button is-outlined">KKU01</a>
           <a class="button is-danger is-outlined">Çekirdek</a><br><br>
@@ -12,20 +14,14 @@
           <a @click="info" class="button is-info">KK</a>
           <a @click="danger" class="button is-danger">KM</a>
           <a @click="warning" class="button is-warning">DD</a>
-        </div>
-        <section>
-
-          <b-field grouped group-multiline>
-            <div class="control">
-              <b-switch v-model="showDetailIcon">Detay</b-switch>
-            </div>
-          </b-field>
-
+          <b-collapse :open="false" aria-id="contentIdForA11y1">
+            <button
+              class="button is-outlined is-pulled-right"
+              slot="trigger"
+              aria-controls="contentIdForA11y1">Alt Kriterler</button>
           <b-table
             :data="data"
             ref="table"
-            paginated
-            per-page="5"
             :opened-detailed="defaultOpenedDetails"
             detailed
             detail-key="id"
@@ -34,7 +30,6 @@
             aria-previous-label="Previous page"
             aria-page-label="Page"
             aria-current-label="Current page">
-
             <template slot-scope="props">
               <b-table-column field="id" label="KOD" width="40" numeric>
                 {{ props.row.id }}
@@ -62,10 +57,63 @@
               </article>
             </template>
           </b-table>
+        </b-collapse>
+        </div>
+        <div class="notification">
+          <a class="button is-outlined">KKU01</a>
+          <a class="button is-danger is-outlined">Çekirdek</a><br><br>
+          <p>Kuruluş faaliyetlerinin tamamını kapsayacak şekilde bir organizasyon yapısı oluşturulmalıdır.</p>
+          <br>
+          <a @click="success" class="button is-success">K</a>
+          <a @click="info" class="button is-info">KK</a>
+          <a @click="danger" class="button is-danger">KM</a>
+          <a @click="warning" class="button is-warning">DD</a>
+          <b-collapse :open="false" aria-id="contentIdForA11y1">
+            <button
+              class="button is-outlined is-pulled-right"
+              slot="trigger"
+              aria-controls="contentIdForA11y1">Alt Kriterler</button>
+            <b-table
+              :data="data"
+              ref="table"
+              :opened-detailed="defaultOpenedDetails"
+              detailed
+              detail-key="id"
+              :show-detail-icon="showDetailIcon"
+              aria-next-label="Next page"
+              aria-previous-label="Previous page"
+              aria-page-label="Page"
+              aria-current-label="Current page">
+              <template slot-scope="props">
+                <b-table-column field="id" label="KOD" width="40" numeric>
+                  {{ props.row.id }}
+                </b-table-column>
 
-        </section>
+                <b-table-column field="user.first_name" label="Açıklama" sortable>
+                  <template v-if="showDetailIcon">
+                    {{ props.row.aciklama }}
+                  </template>
+                </b-table-column>
+              </template>
+
+              <template slot="detail" slot-scope="props">
+                <article class="media">
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a @click="success" class="button is-success">K</a>
+                        <a @click="info" class="button is-info">KK</a>
+                        <a @click="danger" class="button is-danger">KM</a>
+                        <a @click="warning" class="button is-warning">DD</a>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </template>
+            </b-table>
+          </b-collapse>
+        </div>
       </div>
-
     </div>
 </template>
 
@@ -81,7 +129,8 @@
       return {
         data,
         defaultOpenedDetails: [1],
-        showDetailIcon: true
+        showDetailIcon: true,
+
       }
     },
     methods: {
