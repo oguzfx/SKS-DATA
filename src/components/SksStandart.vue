@@ -3,7 +3,7 @@
 
 <div class="column">
   <h1>User {{ $route.params.sksId }}</h1>
-  <div v-for="value in myJson.Diyaliz">
+  <div v-for="value in datagetir">
     <b-collapse :open="false" class="card" >
       <div
         slot="trigger"
@@ -32,12 +32,20 @@
   import json from '../../static/data.json'
     export default {
         name: "SksStandart",
-      data(){
+        data(){
         return{
-          myJson: json
+
         }
+      },
+      computed: { datagetir : function(){
+        if ("Evde Saglik"==this.$route.params.sksId){
+          return  json.EvdeSaglik
+        }
+        else if ("Diyaliz"==this.$route.params.sksId){return json.Diyaliz}
+        else{return json.ERR}
       }
     }
+  }
 
 </script>
 

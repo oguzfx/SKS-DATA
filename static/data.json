@@ -16,4 +16,36 @@
     "Hasta Deneyimi",
     "Sağlıklı Çalışma Yaşamı"
   ]}
-]}
+],"EvdeSaglik": [{
+  "ust":"KURUMSAL HİZMETLER",
+  "alt":[
+    "Kurumsal Yapı",
+    "Kalite Yönetimi",
+    "Doküman Yönetimi",
+    "Risk Yönetimi",
+    "İstenmeyen Olay Bildirim Sistemi",
+    "Eğitim Yönetimi",
+    "Malzeme ve Cihaz Yönetimi",
+    "Tıbbi Kayıtlar",
+    "Sağlıklı Çalışma Yaşamı"
+  ]},{
+  "ust":"SAĞLIK HİZMETLERİ",
+  "alt": [
+    "Hasta Deneyimi",
+    "Hasta Bakımı",
+   "Enfeksiyonların Önlenmesi"
+  ]},
+  {
+    "ust":"GÖSTERGE YÖNETİMİ",
+    "alt": [
+      "Göstergelerin İzlenmesi",
+      "Kalite Göstergeleri"
+    ]
+  }
+],
+"ERR":[
+  {
+    "ust": "Veriler Tamamlanacak!"
+  }
+]
+}
